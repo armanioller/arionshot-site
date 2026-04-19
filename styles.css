@@ -61,7 +61,7 @@ body::before {
 .site-header,
 main,
 .site-footer {
-  width: min(1180px, calc(100vw - 40px));
+  width: min(1240px, calc(100vw - 48px));
   margin-inline: auto;
 }
 
@@ -89,17 +89,11 @@ main,
   letter-spacing: -0.02em;
 }
 
-.brand-mark {
-  position: relative;
-  width: 28px;
-  height: 42px;
-  transform: skewX(-16deg) rotate(9deg);
-  border: 2px solid var(--blue);
-  border-right-width: 5px;
-  background:
-    linear-gradient(135deg, transparent 24%, rgba(17, 158, 232, 0.22) 25% 34%, transparent 35%),
-    linear-gradient(165deg, transparent 48%, rgba(17, 158, 232, 0.28) 49% 57%, transparent 58%);
-  clip-path: polygon(55% 0, 100% 18%, 70% 96%, 0 100%, 28% 36%);
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgba(17, 158, 232, 0.18));
 }
 
 .nav-links {
@@ -135,10 +129,11 @@ main,
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(440px, 1.05fr);
-  gap: 32px;
-  min-height: 650px;
-  padding: clamp(28px, 4.6vw, 58px);
+  grid-template-columns: minmax(360px, 0.88fr) minmax(500px, 1.12fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 58px);
+  min-height: 590px;
+  padding: clamp(30px, 4.2vw, 56px);
   overflow: hidden;
 }
 
@@ -152,7 +147,10 @@ main,
 }
 
 .hero-copy {
+  position: relative;
+  z-index: 2;
   align-self: center;
+  max-width: 540px;
 }
 
 .eyebrow {
@@ -172,10 +170,10 @@ h3 {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 11ch;
   margin: 0;
-  font-size: clamp(3.35rem, 8vw, 6.9rem);
-  line-height: 0.88;
+  font-size: clamp(3.3rem, 5.35vw, 5.75rem);
+  line-height: 0.95;
 }
 
 h2 {
@@ -190,11 +188,11 @@ h3 {
 }
 
 .lead {
-  max-width: 60ch;
+  max-width: 52ch;
   margin: 24px 0 0;
   color: var(--ink-soft);
-  font-size: 1.08rem;
-  line-height: 1.78;
+  font-size: 1.04rem;
+  line-height: 1.72;
 }
 
 .hero-actions,
@@ -268,7 +266,7 @@ h3 {
 
 .hero-visual {
   position: relative;
-  min-height: 540px;
+  min-height: 500px;
   align-self: center;
 }
 
@@ -298,7 +296,7 @@ h3 {
 
 .capture-window {
   position: absolute;
-  inset: 52px 10px 40px 24px;
+  inset: 48px 0 42px 34px;
   overflow: hidden;
   background: linear-gradient(160deg, #102236 0%, #203a55 100%);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -738,7 +736,7 @@ h3 {
   .site-header,
   main,
   .site-footer {
-    width: min(100vw - 24px, 1180px);
+    width: min(100vw - 24px, 1240px);
   }
 
   .hero {
